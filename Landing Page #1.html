@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SSHEIN Rewards — Get Started</title>
+  <meta name="description" content="Get up to $750 towards shopping at SHEIN." />
+  <style>
+    :root {
+      --peach: #ffd4bc;
+      --peach-deep: #ffc5a6;
+      --red: #ef3f3b;
+      --red-dark: #d93032;
+      --ink: #151515;
+      --muted: #756c68;
+      --card: rgba(255, 251, 249, 0.88);
+      --white: #fffaf8;
+      --line: rgba(83, 48, 37, 0.12);
+      --shadow: 0 14px 36px rgba(117, 55, 36, 0.13);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background: linear-gradient(180deg, var(--peach) 0%, #ffd0b5 100%);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    .page {
+      width: min(100%, 620px);
+      margin: 0 auto;
+      padding: 34px 22px 58px;
+      text-align: center;
+    }
+
+    .brand-pill, .activity-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.62);
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(104, 57, 41, .08);
+      font-weight: 800;
+    }
+
+    .brand-pill { padding: 9px 17px 9px 10px; font-size: 13px; }
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      border-radius: 50%;
+      color: white;
+      background: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .activity-pill {
+      margin: 24px auto 0;
+      padding: 11px 22px;
+      font-size: 13px;
+    }
+    .activity-pill .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--red); }
+
+    .hero { margin-top: 18px; }
+    h1 {
+      margin: 0;
+      color: var(--red);
+      font-size: clamp(46px, 10vw, 68px);
+      line-height: .96;
+      letter-spacing: -2.5px;
+      font-weight: 950;
+    }
+    h1 sup { font-size: .38em; vertical-align: top; letter-spacing: 0; }
+    h2 {
+      margin: 11px 0 0;
+      font-size: clamp(21px, 4.5vw, 29px);
+      line-height: 1.08;
+      letter-spacing: -.8px;
+    }
+    .subcopy {
+      max-width: 360px;
+      margin: 23px auto 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.42;
+      font-weight: 700;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 58px;
+      margin: 25px auto 0;
+      padding: 15px 22px;
+      color: #fff;
+      background: var(--red);
+      border: 0;
+      border-radius: 17px;
+      box-shadow: 0 8px 0 rgba(191, 38, 41, .1), 0 12px 25px rgba(190, 51, 48, .18);
+      font-size: 20px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform .18s ease, background .18s ease;
+    }
+    .cta:hover { background: var(--red-dark); transform: translateY(-2px); }
+    .cta:focus-visible { outline: 4px solid rgba(21,21,21,.35); outline-offset: 3px; }
+    .cta-icon { font-size: 23px; line-height: 1; }
+
+    .category-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 18px auto 21px;
+      font-size: 14px;
+      font-weight: 900;
+    }
+    .category-icons { display: flex; gap: 3px; padding: 6px 9px; border-radius: 999px; background: var(--card); box-shadow: 0 6px 15px rgba(104, 57, 41, .09); }
+    .category-icons span { display: grid; place-items: center; width: 24px; height: 24px; font-size: 16px; }
+
+    .how-card {
+      padding: 23px 23px 9px;
+      text-align: left;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .eyebrow { margin: 0 0 10px; color: var(--muted); font-size: 12px; font-weight: 900; letter-spacing: 1px; }
+    .step { display: grid; grid-template-columns: 26px 1fr; gap: 10px; padding: 12px 0 17px; border-top: 1px solid var(--line); }
+    .step:first-of-type { border-top: 0; }
+    .number { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; color: white; background: var(--red); font-size: 13px; font-weight: 900; }
+    .step strong { display: block; margin: 1px 0 5px; font-size: 15px; }
+    .step p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.32; font-weight: 700; }
+    .bottom-cta { margin-top: 17px; }
+
+    .fine-print { margin: 23px auto 0; max-width: 420px; color: rgba(21,21,21,.58); font-size: 11px; line-height: 1.45; }
+    @media (max-width: 430px) {
+      .page { padding: 25px 16px 42px; }
+      .activity-pill { margin-top: 20px; }
+      .how-card { padding-left: 18px; padding-right: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="brand-pill"><span class="mark">S</span><span>SSHEIN Rewards</span></div>
+
+    <div class="activity-pill"><span class="dot" aria-hidden="true"></span><span>12,863</span> shoppers claiming now</div>
+
+    <section class="hero" aria-labelledby="headline">
+      <h1 id="headline">Get $750<sup>*</sup></h1>
+      <h2>Towards shopping at SHEIN</h2>
+      <p class="subcopy">Get up to $750 towards shopping at SHEIN — for dresses, tops, shoes &amp; accessories.</p>
+
+      <!-- EDIT THIS URL ONCE: every “Get My $750” CTA below uses CTA_URL. -->
+      <a class="cta" data-cta href="#"><span class="cta-icon" aria-hidden="true">▣</span> Get My $750<sup>*</sup></a>
+
+      <div class="category-row">
+        <div class="category-icons" aria-hidden="true"><span>⌂</span><span>♧</span><span>♢</span><span>✣</span></div>
+        <span>Dresses, shoes, bags &amp; more</span>
+      </div>
+    </section>
+
+    <section class="how-card" aria-labelledby="how-title">
+      <p class="eyebrow" id="how-title">HOW IT WORKS</p>
+      <div class="step"><span class="number">1</span><div><strong>Create Your Account</strong><p>Sign up takes less than 60 seconds</p></div></div>
+      <div class="step"><span class="number">2</span><div><strong>Complete 2–3 offers</strong><p>Earn up to a $750 Gift Card — the more offers you do the more you’ll earn</p></div></div>
+      <div class="step"><span class="number">3</span><div><strong>Enjoy your reward</strong><p>Gift card is sent directly to your email</p></div></div>
+    </section>
+
+    <a class="cta bottom-cta" data-cta href="#"><span class="cta-icon" aria-hidden="true">▣</span> Get My $750<sup>*</sup></a>
+    <p class="fine-print">*Reward availability, eligibility, and terms may apply. Review the offer details before completing any signup or offer.</p>
+  </main>
+
+  <script>
+    // Change this value to update both CTA buttons.
+    const CTA_URL = 'https://rewardly-8u.vercel.app/rewards?ttclid=E_C_P_CokB1ck7tp3q8pBbT14_vyGnHsFfltnSGsLhЗВWhsQncUSzaWsЕ5гd1oJonВxaZ8CsuХrwİzEfYSu_j1xDG5krMz_9MyoUеUbpІMпkАМnpdiQghWhśłuThJQ2rdHХ8ZSІ5ASВu2ajO6СхT2hLR4EuqÖvLRhłаKQUClyW_85ZGZW_85ZGZW_85ZGZ';
+    document.querySelectorAll('[data-cta]').forEach((button) => {
+      button.href = CTA_URL;
+      button.target = '_blank';
+      button.rel = 'noopener noreferrer';
+    });
+  </script>
+</body>
+</html>
